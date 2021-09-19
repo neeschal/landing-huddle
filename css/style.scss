@@ -1,0 +1,114 @@
+$Violet: hsl(257, 40%, 49%);
+$Soft-magenta: hsl(300, 69%, 71%);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  background-color: $Violet;
+  color: lightgrey;
+}
+
+.main-container {
+  width: 100%;
+  height: auto;
+  background-image: url(../images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 2.2rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+}
+
+.logo {
+  img {
+    width: 40%;
+  }
+}
+
+.container {
+  .left {
+    img {
+      width: 100%;
+      margin: 3rem 0;
+    }
+  }
+
+  .right {
+    text-align: center;
+    p {
+      margin: 1rem 0 2rem 0;
+      font-weight: 100;
+    }
+    a {
+      color: $Violet;
+      text-decoration: none;
+      background-color: white;
+      border-radius: 30px;
+      text-align: center;
+      padding: 0.7rem 5rem;
+      margin: 5rem 0;
+    }
+  }
+}
+.social {
+  margin: 5rem 0 2rem 0;
+  text-align: center;
+  i {
+    margin: 0 0.3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    width: 100%;
+    height: auto;
+    background-image: url(../images/bg-desktop.svg);
+    background-size: contain;
+  }
+  .main-container {
+    background-image: none;
+    width: 85%;
+    margin: 0 auto;
+  }
+  .logo {
+    img {
+      width: 20%;
+    }
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .left {
+      grid-column: 1/2;
+      img {
+        width: 100%;
+      }
+    }
+    .right {
+      grid-column: 2/3;
+      text-align: left;
+      margin: 5rem 0 0 3rem;
+      h2 {
+        font-size: 2.3rem;
+      }
+      p {
+        font-size: 1.1rem;
+        width: 50ch;
+      }
+    }
+  }
+  .social {
+    margin: 0;
+    text-align: right;
+  }
+}
